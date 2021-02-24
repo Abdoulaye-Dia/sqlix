@@ -1,0 +1,96 @@
+--CREATE DATABASE--
+
+CREATE DATABASE sqlix DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+--CREATE TABLE--
+
+CREATE TABLE potion (
+num_potion INT AUTO_INCREMENT,
+lib_potion VARCHAR(30),
+constituant_principal VARCHAR(30),
+PRIMARY KEY (num_potion))
+ENGIN=INNODB;
+
+CREATE TABLE qualite (
+num_qualite INT AUTO_INCREMENT,
+lib_qualite VARCHAR(30),
+PRIMARY KEY (num_qualite))
+ENGINE=INNODB;
+
+CREATE TABLE province (
+num_province INT AUTO_INCREMENT,
+nom_province VARCHAR(30),
+nom_gouverneur VARCHAR(30),
+PRIMARY KEY (num_qualite))
+ENGINE=INNODB;
+
+CREATE TABLE village (
+num_village INT AUTO_INCREMENT,
+nom_village VARCHAR(30),
+nb_huttes INT,
+PRIMARY KEY (num_qualite)
+FOREIGN KEY (num_province) REFERENCES province (num_province))
+ENGINE=INNODB;
+
+CREATE TABLE habitant (
+num_hab INT AUTO_INCREMENT,
+nom VARCHAR(30),
+age INT,
+PRIMARY KEY (num_qualite),
+FOREIGN KEY (num_qualite) REFERENCES qualite (num_qualite),
+FOREIGN KEY (num_village) REFERENCES village (num_village))
+ENGINE=INNODB;
+
+CREATE TABLE fabriquer (
+num_potion INT,
+num_hab INT,
+FOREIGN KEY (num_potion) REFERENCES potion (num_potion),
+FOREIGN KEY (num_hab) REFERENCES habitant (num_hab))
+ENGINE=INNODB;
+
+CREATE TABLE absorber (
+num_potion INT,
+date_a DATETIME,
+num_hab INT,
+quantite INT,
+PRIMARY KEY (date_a, num_potion, num_hab),
+FOREIGN KEY (num_potion) REFERENCES potion (num_potion),
+FOREIGN KEY (num_hab) REFERENCES habitant (num_hab))
+ENGINE=INNODB;
+
+CREATE TABLE resserre (
+num_resserre INT AUTO_INCREMENT,
+nom_resserre VARCHAR(30),
+superficie INT,
+num_village INT,
+PRIMARY KEY (num_resserre),
+FOREIGN KEY (num_village) REFERENCES village (num_village))
+ENGINE=INNODB;
+
+CREATE TABLE categorie (
+code_cat char(3),
+nom_categ VARCHAR(50),
+nb_points INT,
+PRIMARY KEY (code_cat))
+ENGINE=INNODB;
+
+CREATE TABLE trophee (
+num_trophee INT,
+date_prise DATETIME,
+code_cat CHAR(3),
+num_preneur INT,
+num_resserre INT,
+PRIMARY KEY (num_trophee),
+FOREIGN KEY (code_cat) REFERENCES categorie (code_cat),
+FOREIGN KEY (num_preneur) REFERENCES habitant (num_hab),
+FOREIGN KEY (num_resserre) REFERENCES resserre (num_resserre))
+ENGINE=INNODB;
+
+
+
+
+
+
+
+
+

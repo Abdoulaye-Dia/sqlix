@@ -1,0 +1,29 @@
+
+Avantages
+
+Pourquoi préférer alimenter une base de données plutôt qu’un tableur ou qu’un document ? Les bases de données sont bien plus efficaces lorsqu’il s’agit de retrouver des informations. Vous pouvez poser une question à une base de données, par exemple : « Combien de personnes ont accepté de participer à l’événement que j’organise » ou « Quel client a acheté ce produit », et recevoir immédiatement la réponse.
+
+Tout comme les tableurs, les bases de données organisent vos informations en listes. Cependant, contrairement aux tableurs, vous pouvez les afficher sous forme de formulaires. Un formulaire ressemble tout simplement à un formulaire papier et peut être mis en ligne. Les formulaires permettent d’accéder en toute liberté à tous les détails enregistrés. Grâce à eux, vous pouvez par exemple afficher tous vos projets dans une liste, puis cliquer pour consulter les détails d’un projet en particulier. Les formulaires facilitent également la saisie des données.
+
+Qui dit bases de données, dit également précision. Dotées de listes déroulantes attractives, de rubriques renseignées automatiquement et de bien d’autres fonctions encore, les bases de données accélèrent la saisie des données et veillent à leur cohérence.
+
+Vous avez sans nul doute l’habitude des applications qui fonctionnent à la manière d’une base de données, par exemple un carnet d’adresses, un calendrier, un programme de gestion des photos, etc. Bien qu’ils soient extrêmement utiles, ces programmes ne vous permettent d’exécuter qu’un nombre limité de fonctions et le volume d’informations qu’ils contiennent est très limité. A l’opposé, les bases de données peuvent contenir autant de données que vous le souhaitez et vous permettent de présenter ces données comme bon vous semble.
+
+Utilisez une base de données pour relier vos informations. Imaginons que vous ayez une liste de clients et une liste d’articles vendus. En connectant (ou en « reliant ») ces listes, vous pourrez afficher tous les articles achetés par un client en particulier. Libre à vous, par la suite, de relier les enregistrements de la base de données à des fichiers, des photos, des films, mais aussi des pages Web, pour tout centraliser. Essayez donc de faire la même chose avec un tableur !
+
+Les bases de données font bien plus que contenir des données. Elles aident à résoudre des problèmes, à répondre à des questions et à prendre des décisions. Vous pouvez créer des formules et des calculs pour vous aider dans vos analyses, puis générer rapidement des rapports pour partager votre point de vue.
+
+La souplesse des impressions est l’un des autres points forts des bases de données. Qu’il s’agisse d’imprimer des étiquettes de publipostage, des rapports, des factures, des badges en vue de l’organisation d’une manifestation ou de formulaires papier, tout est plus simple avec les bases de données.
+
+inconvenient
+
+Les contraintes du modèle relationnel
+Les contraintes d'intégrité relationnelle se réfèrent aux conditions qui doivent être présentes pour qu'une relation soit valide. Il existe de nombreux types de contraintes d'intégrité. Les contraintes sur le système de gestion de base de données relationnelles sont principalement divisées en trois catégories principales : contraintes clés, contraintes de domaine et contraintes d'intégrité référentielle.
+
+Une contrainte de clé : qui indiquent qu'une table doit toujours avoir une clé primaire La valeur de l'attribut pour les différents enregistrements de la relation doit être unique. Les contraintes clés sont également connues sous le nom de contraintes d'entité.
+
+Les contraintes de domaine limitent la plage des valeurs de domaine d'un attribut. Ils spécifient également l'individualité et si un attribut peut avoir une valeur nulle. Il peut également spécifier une valeur par défaut pour un attribut lorsque aucune valeur n'est fournie.
+
+Les contraintes du domaine peuvent être violées si une valeur d'attribut n'apparaît pas dans le domaine correspondant ou si elle n'est pas du type de données approprié.
+
+La contrainte d'intégrité référentielle indique que les relations entre les tables doivent toujours être cohérentes. En d'autres termes, la zone de clé étrangère doit correspondre à la clé primaire référencée par la clé étrangère. Tout changement de champ de clé primaire doit être appliqué à toutes les clés étrangères, ou pas du tout.

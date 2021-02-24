@@ -1,0 +1,20 @@
+C:\wamp64\bin\mysql\mysql8.0.21\bin\mysql -u root
+C:\>C:\wamp64\bin\mysql\mysql8.0.21\bin\mysql -u root -p
+pour se connecter en ligne de commande dans mysql avec le compte root
+
+ CREATE TABLE qualite(
+    num_qualite INT AUTO_INCREMENT,
+    lib_qualite VARCHAR(30),
+    PRIMARY KEY (num_qualite))
+    ENGINE=INNODB;
+
+
+ CREATE TABLE Village (
+   NumVillage INT  AUTO_INCREMENT,
+   NomVillage VARCHAR (25),
+   Nb_Huttes INT  ,
+   NumProvince INT  ,
+   PRIMARY KEY (NumVillage),
+   FOREIGN KEY (NumProvince) REFERENCES Province (NumProvince)
+    )
+    ENGINE=INNODB;
